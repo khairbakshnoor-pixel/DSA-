@@ -1,18 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package com.mycompany.array;
 
-/**
- *
- * @author GT-Tech
- */
-public class myarray {
+public class  MyArray{
     private int[] arr;
    private  int size;
    
-    public myarray(int capacity){
+    public MyArray(int capacity){
        arr=new int[capacity];
        size=0;
    }
@@ -23,14 +14,17 @@ public class myarray {
        return size==0;
    }
    public int getarray(int index){
+       if(index<0 || index>=size){
+           throw new IndexOutOfBoundsException("index doesnt exist");
+       }
        return arr[index];
    }
    public void setarray(int index,int value){
        if(index<0|| index>=size){
            System.out.println("index doesnt exist");
+           return;
        }
        arr[index]=value;
-       size++;
    }
    public void insert(int value){
        if(isfull()){
@@ -41,6 +35,10 @@ public class myarray {
        size++;
    }
    public void insertat(int index,int value){
+       if(index<0 || index>size){
+           System.out.println("index doesnt exist");
+           return;
+       }
        if(isfull()){
            System.out.println("The array is full");
            return;
@@ -56,8 +54,11 @@ public class myarray {
            System.out.println("Array is empty ");
            return;
        }
-       //
-       for(int i = index;i<=size-1;i++){
+       if(index<0 || index>=size){
+           System.out.println("index doesnt exist");
+           return;
+       }
+       for(int i = index;i<size-1;i++){
        arr[i]=arr[i+1];
    }
        size--;
@@ -74,9 +75,10 @@ public class myarray {
      public void search(int value){
        for(int i=0;i<size;i++){
            if(arr[i]==value){
-               System.out.println("Find at "+i+"value"+value);
+               System.out.println("Find at "+i+" value "+value);
            }
        }
    
+}
 }
 
