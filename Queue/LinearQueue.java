@@ -19,7 +19,7 @@ public class LinearQueue {
     }
     public void enque(int value){
         if(isfull()){
-            System.out.println("THe QUeue os overflow");
+            System.out.println("THe QUeue is overflow");
             return ;
         }
         if(isempty()){
@@ -30,7 +30,7 @@ public class LinearQueue {
     }
 public int deque(){
     if(isempty()){
-        System.out.println("Stack is underflow");
+        System.out.println("Queue is underflow");
         return -1;
     }
     int value=arr[front];
@@ -45,7 +45,7 @@ public int deque(){
     }
     public int peak(){
         if(isempty()){
-            System.out.println("Stack is underflow");
+            System.out.println("Queue is underflow");
             return-1 ;
         }
         return  arr[front];
@@ -53,7 +53,7 @@ public int deque(){
     }
     public  void  displaY(){
  if(isempty()){
-            System.out.println("Stack is underflow");
+            System.out.println("Queue is underflow");
             return ;
         }
         for(int i=front;i<=rear;i++ ){
