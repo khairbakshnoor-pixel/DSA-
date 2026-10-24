@@ -67,10 +67,16 @@ public class myarray {
            System.out.println("The Array is Empty");
            return;
        }
-       for(int i=0;i<size-1;i++){
+       for(int i=0;i<=size-1;i++){
            System.out.println(arr[i]);
        }
    }
+     public void search(int value){
+       for(int i=0;i<size;i++){
+           if(arr[i]==value){
+               System.out.println("Find at "+i+"value"+value);
+           }
+       }
    
 }
 
