@@ -1,12 +1,15 @@
 public class stack {
     int [] arr;
     int top;
-    stack(int capacity){
+    public stack(int capacity){
         arr=new int[capacity];
         top=-1;
     }
     public boolean isempty(){
         return  top==-1;
+    }
+    public int size(){
+        return top+1;
     }
     public  boolean isfull(){
         return top==arr.length-1;

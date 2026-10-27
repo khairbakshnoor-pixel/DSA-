@@ -8,5 +8,6 @@ public class mainofstack {
     s1.pop();
     s1.displaY();
     System.out.println(s1.peak());
+    System.out.println(s1.size());
 }
 }
