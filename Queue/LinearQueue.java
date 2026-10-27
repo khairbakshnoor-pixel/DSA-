@@ -2,6 +2,7 @@ public class LinearQueue {
     int [] arr;
     private int rear;//for adding
     private int front;//for removing
+
     public LinearQueue(int capacity){
         arr=new int[capacity];
         rear=-1;
@@ -9,7 +10,7 @@ public class LinearQueue {
 
     }
     public boolean isempty(){
-        return front==-1;
+        return front==-1;// front first value
     }
     public boolean  isfull(){
         return rear==arr.length-1;

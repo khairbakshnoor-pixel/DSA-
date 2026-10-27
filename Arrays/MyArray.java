@@ -1,7 +1,7 @@
 
 public class  MyArray{
     private int[] arr;
-   private  int size;
+    private  int size;
    
     public MyArray(int capacity){
        arr=new int[capacity];
@@ -15,7 +15,8 @@ public class  MyArray{
    }
    public int getarray(int index){
        if(index<0 || index>=size){
-           throw new IndexOutOfBoundsException("index doesnt exist");
+           System.out.println("index doesnt exist");
+           return -1;
        }
        return arr[index];
    }
@@ -31,7 +32,7 @@ public class  MyArray{
            System.out.println("The array is full");
            return;
        }
-       arr[size]=value;
+       arr[size]=value; 
        size++;
    }
    public void insertat(int index,int value){
@@ -44,7 +45,7 @@ public class  MyArray{
            return;
        }
        for(int i=size-1;i>=index;i--){
-           arr[i+1]=arr[i];
+           arr[i+1]=arr[i];// 
        }
        arr[index]=value;
        size++;
